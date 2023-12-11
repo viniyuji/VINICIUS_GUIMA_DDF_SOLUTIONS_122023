@@ -2,14 +2,19 @@
 Nessa etapa foi gravado um vídeo fornecendo uma solução técnica para uma empresa fictícia. O vídeo pode ser acessado no seguite [link](https://youtu.be/oyy6MwAZTgM).
 
 ## Item 2
-Nessa etapa criou-se um pipeline para ingestão e catalogação do dataset, o qual pode ser acessado no seguinte [link](https://app.dadosfera.ai/pt-BR/collect/pipelines/67db9cfb-25c4-4abd-a03d-e9b6977136b9).
+Nessa etapa criou-se um pipeline para ingestão e catalogação do dataset product-search-corpus, pipeline o qual pode ser acessado no seguinte [link](https://app.dadosfera.ai/pt-BR/collect/pipelines/67db9cfb-25c4-4abd-a03d-e9b6977136b9). Já a tabela pode ser acessada no seguinte [link](https://metabase-treinamentos.dadosfera.ai/question/605-tb-c9p336-product-search-scopus-stream).  
+Foram ingeridas três colunas: *Docid*, *Text* e *Title*:
+
+![image_info](img/ingested_dataset.png)
 
 ## Item 3
-Nessa etapa foi usada a API da OpenAI para determinar as *features* de cada produto. O código utilizado está neste repositório. Para acessá-lo basta acessar a pasta **item_3**.
-Vale ressaltar que, por conta de segurança, não foi incluido o .env com as chaves de acesso da API.
+Nessa etapa foi usada a API da OpenAI para determinar as *features* de cada produto. O código utilizado está neste repositório. Para acessá-lo basta acessar a pasta **item_3**.  
+Vale ressaltar que, por conta de segurança, não foi incluido o .env com as chaves de acesso da API.  
+Como resultado final, conseguiu-se obter as informações *category*, *material* e *feature*:
+![image_info](img/open_ai_feature_classify.png)
 
 ## Item 4
-Nessa etapa fez-se a análise da quantidade de produtos por categoria. A coleção com a query requisitada pode ser acessada no seguinte [link](https://metabase-treinamentos.dadosfera.ai/collection/302-vinicius-yuji-122023).
+Nessa etapa fez-se a análise da quantidade de produtos por categoria. A coleção com a query requisitada pode ser acessada no seguinte [link](https://metabase-treinamentos.dadosfera.ai/collection/302-vinicius-yuji-122023).  
 O resultado obtido foi este:
 
 ![image info](img/print_query.png)
@@ -17,7 +22,7 @@ O resultado obtido foi este:
 Pode-se observar que muitos produtos ficaram na classificação **Others**, ou seja, não tiveram sua classificação determinada pela API da OpenAI.
 
 ## Item 5
-Inicialmente o data app do item 5 foi feito localmente. Os arquivos estão neste repositório, dentro da pasta **item_5**. 
+Inicialmente o data app do item 5 foi feito localmente. Os arquivos estão neste repositório, dentro da pasta **item_5**.  
 Foi feita uma tela inicial de login, na qual se pode logar com as seguintes credenciais:
 - Username: dadosfera
 - Password: dadosfera
